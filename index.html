@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Опросник</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="step active" id="step1">
+    <h2>Выберите позицию</h2>
+    <div class="tiles">
+      <div class="tile" data-role="Sale">🛍️ Sale</div>
+      <div class="tile" data-role="Retention">🔄 Retention</div>
+      <div class="tile" data-role="Team Leader">👥 Team Leader</div>
+      <div class="tile" data-role="Head">💼 Head</div>
+    </div>
+  </div>
+
+  <div class="step" id="step2">
+    <h2>Выберите язык</h2>
+    <div class="tiles" id="languageTiles"></div>
+  </div>
+
+  <div class="step" id="step3">
+    <h2>Заполните данные</h2>
+    <form id="finalForm">
+      <input type="text" name="name" placeholder="Имя" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Телефон" />
+      <textarea name="about" placeholder="О себе" rows="3"></textarea>
+      <button type="submit">Отправить</button>
+      <p id="statusMsg"></p>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: -apple-system, sans-serif;
+  background: #101010;
+  color: white;
+}
+
+
+.step {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  animation: fadeIn 0.5s ease;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.step.active {
+  display: flex;
+}
+
+form#finalForm {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 2rem;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form#finalForm input,
+form#finalForm textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: background 0.3s;
+  box-sizing: border-box;
+}
+
+form#finalForm button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  background: linear-gradient(145deg, #1e88e5, #1565c0);
+  border: none;
+  border-radius: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#statusMsg {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #a0d468;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
