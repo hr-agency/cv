@@ -44,30 +44,16 @@ document.getElementById('finalForm').addEventListener('submit', async (e) => {
     position: selectedRole,
     language: selectedLang
   };
-
-  console.log("Отправка данных:", payload);
-
   try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbx_sL0IhaoL_KLiGMjO_1eCu1fome-KxD0aBrol2te0r10YWvjM-ZZCgDTF65BiiRVN/exec', {
+    await fetch('https://script.google.com/macros/s/ВАШ_ID/exec', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     });
-
-    const resultText = await response.text();
-    console.log("Ответ сервера:", resultText);
-
-    if (response.ok) {
-      document.getElementById('statusMsg').innerText = '✅ Отправлено';
-      form.reset();
-    } else {
-      document.getElementById('statusMsg').innerText = '❌ Ошибка сервера';
-    }
-
+    document.getElementById('statusMsg').innerText = '✅ Отправлено';
+    form.reset();
   } catch (err) {
-    console.error('Ошибка при отправке:', err);
-    document.getElementById('statusMsg').innerText = '❌ Ошибка сети';
+    document.getElementById('statusMsg').innerText = '❌ Ошибка';
   }
 });
+
