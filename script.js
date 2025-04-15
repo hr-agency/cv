@@ -45,7 +45,7 @@ document.getElementById('finalForm').addEventListener('submit', async (e) => {
     language: selectedLang
   };
   try {
-    await fetch('https://script.google.com/macros/s/ВАШ_ID/exec', {
+    await fetch('https://script.google.com/macros/s/AKfycbx_sL0IhaoL_KLiGMjO_1eCu1fome-KxD0aBrol2te0r10YWvjM-ZZCgDTF65BiiRVN/exec', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
